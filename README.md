@@ -3,6 +3,7 @@ A simple note-taking system based on the full-text search engine elasticsearch, 
 
 
 ##docker镜像，直接运行镜像并运行，按照步骤启动各个组件
+
 docker pull  lidonghai11/private:notes_03
 1、运行nginx:
 /export/servers/app/nginx/sbin/nginx
@@ -21,5 +22,6 @@ pen  0.0.0.0:9200 172.17.0.2:9200  #将宿主机9200端口映射到容器的9200
 
 
 ##git clone下来的程序里边HelloWorld目录就是项目目录
+
 git  clone git@github.com:lidonghai11/notes.git
 ln -s notes/kuibunotes/HelloWorld/  /export/servers/app/notes/HelloWorld/  #链接下，方便测试
