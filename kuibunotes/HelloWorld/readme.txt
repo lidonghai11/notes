@@ -9,5 +9,13 @@ https://www.runoob.com/django/django-install.html
 6、配置nginx+uwsgi
 
 
+##docker镜像，
+docker pull  lidonghai11/private:notes_03
+1、运行nginx 
+2、运行uwsgi
+3、运行elasticsearch7.15，
+4、运行mysqld
+
+
 
 
