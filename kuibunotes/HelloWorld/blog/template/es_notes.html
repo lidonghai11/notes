@@ -1,0 +1,33 @@
+<html>
+<head>
+		<title>索引页</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><!--设置编码为utf-8-->
+		
+		 <meta name="keywords" content=""/><!--被用来搜索的关键字-->
+		 <meta name="description" content=""/>
+		 <meta http-equiv="Windows-Tatget" content="_top"><!--你的网页将不会被拿到分针中去，会占领整个网页-->
+		 <meta http-equiv="Pragma" content="no-cache"><!--设置无缓存-->
+		 <meta http-equiv="expires" content="Wed, 23 Aug 2026 12:40:27 UTC" /><!--设置网页过期时间-->
+		 
+		 <meta http-equiv="Page-Enter" content="revealTrans(Transition=23,Duration=1.000)">
+		 <meta http-equiv="Page-Exit" content="revealTrans(Transition=23,Duration=1.000)"><!--页面进入退出是的特效-->
+		 
+		 
+	
+</head>
+
+
+			<frameset frameborder="0"  rows="80,*"><!--可以去除边框-->
+					<frame name="top" src="/static/top.html" scrolling="no" noresize="noresize"/>
+					<frameset cols="*">
+						<frame  name="main"  src="/blog/es_notes_search?key_words={{key_words}}"  noresize="noresize"/>
+					
+					</frameset>
+					
+					<noframes>
+						你的浏览器过时了请更换！
+					</noframes>
+
+			</frameset>
+
+</html>

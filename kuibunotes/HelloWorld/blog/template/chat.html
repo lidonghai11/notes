@@ -1,0 +1,118 @@
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+
+	<link href="/static/robot/lib/mCustomScrollbar/jquery.mCustomScrollbar.min.css" rel="stylesheet" />
+	<link href="/static/robot/lib/ueditor/themes/default/css/umeditor.css"  rel="stylesheet">
+	<link href="/static/robot/lib/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+	<link href="/static/robot/css/style.css" rel="stylesheet">
+	<body>
+       <!--
+	<a id="leftBtn">左一条</a><br>
+	<a id="rightBtn">右一条</a><br>
+	<a id="addTimestamp1">添加时间戳(当前时间)</a><br>
+	<a id="addTimestamp2">添加时间戳(指定时间)</a><br>
+    <a id="openW">打开窗口</a><br>
+    <a id="closeW">关闭窗口</a><br>
+       -->
+		<script src="/static/robot/lib/jquery.js" ></script>
+		<script src="/static/robot/lib/mCustomScrollbar/jquery.mCustomScrollbar.concat.min.js" ></script>
+		<script type="text/javascript" src="/static/robot/lib/ueditor/umeditor.config.js"></script>
+    	<script type="text/javascript" src="/static/robot/lib/ueditor/umeditor.min.js"></script>
+    	<script type="text/javascript" src="/static/robot/lib/ueditor/lang/zh-cn/zh-cn.js"></script>
+    	<script type="text/javascript" src="/static/robot/js/jquery.chat.js"></script>
+    	<script>
+    	jQuery(document).ready(function($) {
+//     		$.chat();
+                
+    		$.chat({
+    			width:$(window).width()/2,
+    			height:$(window).height(),
+    			title:"你问我答",
+    			beforeSend:function(data){ console.log("开始发送信息===="+data);
+                                                  var myDate = new Date();  
+                                                  var mytime=myDate.toLocaleTimeString();
+                                                  $.chat("addTimestamp",mytime);
+},
+    			afterSend:function(data){ console.log("发送信息结束===="+data);
+                                                  data=data.replace(/<[^>]+>/g,"") ;
+                                                  $.getJSON('/blog/answer', {query: data,check: 1}).done(function (data) { $.chat("addReceiveMessage",data['answer']);});  
+                                                  setTimeout(function(){
+                                                  $("mCSB_1_container").mCustomScrollbar("scrollTo","last");
+                                                  $("mCSB_1_scrollbar_vertical").mCustomScrollbar("scrollTo","last");
+                                                  $("mCSB_1").mCustomScrollbar("scrollTo","last");
+                                                  $(".mCustomScrollbar").mCustomScrollbar("scrollTo","last");
+                                                  $("mCSB_draggerContainer").mCustomScrollbar("scrollTo","last");
+                                                  $("mCSB_dragger_bar").mCustomScrollbar("scrollTo","last");
+                                                  $("mCSB_draggerRail").mCustomScrollbar("scrollTo","last");
+                                                  }, 3000);
+ },
+    			loadHistory:{  //返回格式请查看test.json文件
+    				enable:false,
+    				url:"test.json",
+    				data:{},
+    				success:function(){
+    					console.log("成功");
+    				}
+    			}
+    		});
+                $.chat("openChat");
+                var myDate = new Date();  
+                var mytime=myDate.toLocaleTimeString();
+    		$.chat("addTimestamp",mytime);
+                $.chat("addReceiveMessage","小伙子你有啥问题");
+
+
+
+
+
+
+                $(window).resize(function() {
+                  window.location.reload()
+                 });
+
+
+    		$("#rightBtn").click(function(event) {
+    			$.chat("addSendMessage","你好111111");
+    		});
+    		$("#leftBtn").click(function(event) {
+    			//$.chat("addReceiveMessage","你好22222");
+                                                  $("mCSB_1_scrollbar_vertical").mCustomScrollbar("scrollTo","last");
+                                                  $("mCSB_1_scrollbar_vertical").mCustomScrollbar("scrollTo","bottom");
+                                                  $("mCSB_draggerContainer").mCustomScrollbar("scrollTo","bottom");
+                                                  $("mCSB_dragger_bar").mCustomScrollbar("scrollTo","bottom");
+                                                  $("mCSB_draggerRail").mCustomScrollbar("scrollTo","bottom");
+
+                                                  $("mCSB_1_container").mCustomScrollbar("scrollTo","last");
+                                                  $("mCSB_1_scrollbar_vertical").mCustomScrollbar("scrollTo","last");
+                                                  $("mCSB_1").mCustomScrollbar("scrollTo","last");
+                                                  $(".mCustomScrollbar").mCustomScrollbar("scrollTo","last");
+                                                  $("mCSB_draggerContainer").mCustomScrollbar("scrollTo","last");
+                                                  $("mCSB_dragger_bar").mCustomScrollbar("scrollTo","last");
+                                                  $("mCSB_draggerRail").mCustomScrollbar("scrollTo","last");
+
+    		});
+    		$("#addTimestamp1").click(function(){
+    			$.chat("addTimestamp");
+    		});
+    		$("#addTimestamp2").click(function(){
+    			$.chat("addTimestamp","12:20");
+    		});
+            $("#openW").click(function(event) {
+               $.chat("openChat");
+            });
+
+            $("#closeW").click(function(event) {
+               $.chat("closeChat");
+         
+        });
+        });
+
+
+
+
+        </script>
+	</body>
+</html>

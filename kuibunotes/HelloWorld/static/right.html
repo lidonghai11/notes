@@ -1,0 +1,158 @@
+<!DOCTYPE HTML><!--html5的写法-->
+<html>
+<head>
+		
+		<title> 搜索首页</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><!--设置编码为utf-8-->
+		
+		 <meta name="keywords" content=""/><!--被用来搜索的关键字-->
+		 <meta name="description" content=""/>
+		 <meta http-equiv="Windows-Tatget" content="_top"><!--你的网页将不会被拿到分针中去，会占领整个网页-->
+		 <meta http-equiv="Pragma" content="no-cache"><!--设置无缓存-->
+		 <meta http-equiv="expires" content="Wed, 23 Aug 2026 12:40:27 UTC" /><!--设置网页过期时间-->
+		 
+		 <meta http-equiv="Page-Enter" content="revealTrans(Transition=23,Duration=1.000)">
+		 <meta http-equiv="Page-Exit" content="revealTrans(Transition=23,Duration=1.000)"><!--页面进入退出是的特效-->
+		  
+		 
+		 <link rel="stylesheet" type="text/css" href="/static/right_layout.css"/>
+		 <link rel="stylesheet" type="text/css" href="/static/right_layout2.css"/>
+
+		 
+<style>
+
+		body {
+scrollbar-arrow-color:#ffffff; /*图6,三角箭头的颜色*/
+scrollbar-face-color: #ffffff; /*图5,立体滚动条的颜色*/
+scrollbar-3dlight-color:#ffffff; /*图1,立体滚动条亮边的颜
+
+色*/
+scrollbar-highlight-color: #ffffff; /*图2,滚动条空白部分的
+
+颜色*/
+scrollbar-shadow-color: #ffffff; /*图3,立体滚动条阴影的颜
+
+色*/
+scrollbar-darkshadow-color: #ffffff; /*图4,立体滚动条强阴
+
+影的颜色*/
+scrollbar-track-color: #ffffff; /*图7,立体滚动条背景颜色*/
+
+scrollbar-base-color:#ffffff; /*滚动条的基本颜色*/
+Cursor:url(mouse.cur); /*自定义个性鼠标*/
+}
+
+
+
+</style>		
+		 
+		 
+	
+</head>
+
+<body onscroll="test()">
+<table id=table1 cellspacing=0 cellpadding=0 border=0px bordercolor=red  >
+	<form action="/blog/post_search_submit"  method="get">
+	<tr id=tr1 >
+		<td >
+			<table id=table1_1 >
+				<tr><td><input id='input1'  type="text" name="key_words" style="color: black;"  value="{{key_words}}"> <input id='input2'  name="btn"  type="image" src="/static/bt.gif"></td></tr>
+			</table>
+		</td>
+	</tr>
+	</form>
+	
+	
+	<tr>
+		<td>
+			<table id=table2 cellspacing=0 cellpadding=0 >
+
+				        {% for i in user %}
+                                        <tr>
+						<td>
+                                                    {% load help_text %}
+						    <span class=title><a href='{{ i|get:"_source"|get:"url" }}' target='_blank'>{{ i|get:"_source"|get:"title"|slice:":50" }}{% if i|get:"_source"|get:"title"|length > 50 %}...{% endif %}</a></span><br>
+							<div class=plugs></div>		
+							<div class=plugs></div>	
+								<span class=content>{{ i|get:"_source"|get:"summary"|slice:":600" }}{% if i|get:"_source"|get:"summary"|length > 600 %}...{% endif %}</span>
+							<form class=myform action="/blog/es_update" target="_blank" method="get" style="display:inline;" >
+							<input type="hidden" name="Title" value='{{ i|get:"_source"|get:"title" }}'>
+							<input type="hidden" name="Summary" value='{{ i|get:"_source"|get:"summary" }}'>
+							<input type="hidden" name="Content" value='{{ i|get:"_source"|get:"content" }}'>
+							<input type="hidden" name="Url" value='{{ i|get:"_source"|get:"url" }}'>
+							<input type="hidden" name="Example" value='{{ i|get:"_source"|get:"example" }}'>
+							<input type="hidden" name="Annotation" value='{{ i|get:"_source"|get:"annotation" }}'>
+							<input type="hidden" name="time" value='{{ i|get:"_source"|get:"time" }}'>
+							<input type="hidden" name="Oid" value='{{ i|get:"_id" }}'>
+							<input class='btn'type="submit" style="display:inline;" value="笔记"/>
+							</form>
+							<form class=myform2 action="/blog/es_delete" target="" method="get" style="display:inline;" >
+		                                        <input type="hidden" name="Oid" value='{{ i|get:"_id" }}'>
+		                                        <input type="hidden" name="key_words" value='{{key_words}}'>
+		                                        <input type="hidden" name="page" value='{{ user.number }}'>
+							<input class='btn'type="submit" style="display:inline;"  value="删除"/>
+							</form>
+
+							<br>
+							<div class=plugs1></div>
+						<td>
+					</tr>
+
+
+					{% endfor %}
+
+
+
+
+
+
+
+
+
+                               
+		
+			
+			</table>
+		
+		
+		</td>
+	
+	</tr>
+	
+	<tr id=tr3 >
+	<td>
+                Page {{ user.number }} of {{ user.paginator.num_pages }}
+
+                {% if user.has_previous %}
+                   <a href="/blog/post_search_submit?page={{ user.previous_page_number }}&key_words={{key_words}}">上一页</a>
+                {% endif %}
+
+                {% if user.paginator.num_pages > 10 %}
+                   {% for i in 10|get_range %}     
+
+                   <a href="/blog/post_search_submit?page={{ i }}&key_words={{key_words}}">{{ i }}</a>
+                   {% endfor %}
+
+
+
+                {% else %}
+                   {% for i in user.paginator.num_pages|get_range %}  
+                
+                   <a href="/blog/post_search_submit?page={{ i }}&key_words={{key_words}}">{{ i }}</a>
+                   {% endfor %} 
+
+                {% endif %}
+
+
+
+                {% if user.has_next %}
+                   <a href="/blog/post_search_submit?page={{ user.next_page_number }}&key_words={{key_words}}">下一页</a>
+                {% endif %}
+        </td>
+	</tr>
+</table>
+	
+	
+</body>
+<script src="/static/right_all.js"> </script>
+</html>

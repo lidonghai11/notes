@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>ChinaZ</title>
+<link href="/static/style.css" rel='stylesheet' type='text/css' />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="Pink Contact Form ,Login Forms,Sign up Forms,Registration Forms,News latter Forms,Elements"./>
+<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } 
+function myFunction () 
+{ 
+
+
+if(yz()){
+              document.getElementById('form1').submit();
+	}
+else{
+		alert("所有项不能为空");
+	}
+
+}; 
+
+function yz(){
+var m=document.getElementsByClassName("check");
+for(var i=0;i<m.length;i++)
+{
+if(m[i].value==""||m[i].value==null)
+{
+return false;
+}
+}
+return true;
+}
+
+
+
+</script>
+
+
+<!--webfonts-->
+<!--<link href='http://fonts.useso.com/css?family=Lato:100,300,400,700,100italic,300italic,400italic|Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>-->
+<!--<link href='http://fonts.useso.com/css?family=Raleway:400,200,300,500,600,800,700,900' rel='stylesheet' type='text/css'>-->
+<!--//webfonts-->
+</head>
+<body>
+<!--	<h1>跬步笔记</h1>-->
+	<div class="login-01">
+			<form action="/blog/es_insert/" method="post" id="form1" >
+				<ul>
+				<li class="first">
+					<a href="#" class=" icon user"></a><input type="text" class="text check" value="Title" name="Title"  onfocus="if (this.value == 'Title') {this.value = '';}" onblur="if (this.value == '') {this.value = 'Title';}" >
+					<div class="clear"></div>
+				</li>
+
+				<li class="second">
+				<a href="#" class=" icon msg"></a><textarea class="check" value="Summary" onfocus="if (this.value == 'Summary') {this.value = '';}" name="Summary" onblur="if (this.value == '') {this.value = 'Summary';}">Summary</textarea>
+				<div class="clear"></div>
+				</li>
+
+				<li class="second">
+				<a href="#" class=" icon msg"></a><textarea class="check" value="Content" name="Content" onfocus="if (this.value == 'Content') {this.value = '';}" onblur="if (this.value == '') {this.value = 'Content';}">Content</textarea>
+				<div class="clear"></div>
+				</li>
+
+				<li class="first">
+					<a href="#" class=" icon email"></a><input type="text" class="text check" value="Url" name="Url" onfocus="if (this.value == 'Url') {this.value = '';}" onblur="if (this.value == '') {this.value = 'Url';}" >
+					<div class="clear"></div>
+				</li>
+
+				<li class="second">
+				<a href="#" class=" icon msg"></a><textarea class="check" value="Example" name="Example" onfocus="if (this.value == 'Example') {this.value = '';}" onblur="if (this.value == '') {this.value = 'Example';}">Example</textarea>
+				<div class="clear"></div>
+				</li>
+
+				<li class="second">
+				<a href="#" class=" icon msg"></a><textarea  class="check" value="Annotation" name="Annotation" onfocus="if (this.value == 'Annotation') {this.value = '';}" onblur="if (this.value == '') {this.value = 'Annotation';}">Annotation</textarea>
+				<div class="clear"></div>
+				</li>
+
+			<!--	<li class="first">
+					<a href="#" class=" icon phone"></a><input type="text" class="text" value="Phone" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Phone';}" >
+					<div class="clear"></div>
+				</li>-->
+			</ul>
+			<input type="submit" onclick="myFunction()" value="Submit" >
+			<div class="clear"></div>
+		</form>
+</div>
+	</div>
+</body>
+</html>

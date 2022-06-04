@@ -1,0 +1,204 @@
+body {
+		    background-size:cover;/*背景图片填充整个页面，火狐支持，但ie不支持用下边的滤镜方法可以解决*/
+			
+            filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/static/bg.gif',sizingMethod='scale');/*背景不满页面*/
+			
+			background-color:black;/*背景设置成黑色*/
+			background-image:url(/static/bg.gif);/*设置背景那个图片，当前IP下工作目录文件*/
+			background-repeat:no-repeat;/*设置背景图片不重复*/
+			background-position:bottom right;/*设置背景那个图片位置*/
+			background-attachment:fixed;/*设置背景图片不滚动*/
+			overflow:hiden;
+			
+			padding:0;
+			margin:0;
+			text-align:center;
+			
+			color:white;
+			
+			}
+			
+		
+#header {
+width:100%;
+height:0px;
+background:black;
+min-width:900px;
+font-size:14px;
+}
+
+#content{
+min-height:600px;
+
+position:absolute;
+display:block;
+}
+
+ul {
+margin:0px;
+padding:0px;
+list-style:none;
+}
+
+#header  li {
+width:100px;
+height:30px;
+float:left;
+text-align:center;
+line-height:120px;
+
+}
+#guest a,li a{
+text-decoration:none;
+}
+
+#guest{
+width:100px;
+height:30px;
+float:right;
+text-align:center;
+line-height:120px;
+
+}
+
+
+
+table {
+ position:absolute;
+ top:22%;
+ left:128px;
+ width:600px;
+ height:48px;
+ text-align:center;
+
+
+}
+
+td{
+width:100%;
+min-width:500px;
+}
+
+#b1{
+height:50px;
+margin-top:15px;
+float:left;
+font-size:30px; 
+width:10%;
+}
+
+#b2{
+height:50px;
+margin-top:30px;
+float:left;
+font-size:16px; 
+width:5%;
+}
+#input1{
+width:65%;
+height:50px;
+top:0px;
+float:left;
+
+}
+#input2{
+height:56px;
+top:0px;
+float:left;
+
+}
+#footer{
+width:50%;
+height:40px;
+position:fixed;
+bottom:12%;
+left:36%;
+min-width:900px;
+font-size:16px;
+
+text-align:left;
+}
+
+
+textarea{
+resize:none;
+position:fixed;
+bottom:7%;
+
+
+right:15px;
+color:white;
+background-color: rgba(255,255,255,0.1);/* IE9、标准浏览器、IE6和部分IE7内核的浏览器(如QQ浏览器)会读懂 */
+border:0px;
+
+overflow:hidden;
+font-size:14px;
+}
+
+
+
+
+#left{
+position:absolute;
+width:70px;
+height:20px;
+overflow:hidden;
+
+left:20%;
+
+}
+#right{
+position:absolute;
+width:70px;
+height:20px;
+overflow:hidden;
+
+right:20%;
+
+}
+
+select{
+border:0;
+background-color: rgba(0,0,0,0.1);/* IE9、标准浏览器、IE6和部分IE7内核的浏览器(如QQ浏览器)会读懂 */
+width:90px;
+
+color:white;
+}
+
+
+a{
+color:white;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media \0screen\,screen\9 {/* 只支持IE6、7、8 */
+select{
+border:0;
+background-color: rgba(0,0,0,0.1);/* IE9、标准浏览器、IE6和部分IE7内核的浏览器(如QQ浏览器)会读懂 */
+}
+
+
+
+ 
+
+
+
+
+
+
+
+
+    
+

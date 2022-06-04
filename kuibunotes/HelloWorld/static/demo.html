@@ -1,0 +1,272 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8">
+<title>jQuery垂直多级下拉树形菜单代码</title>
+<script src="/static/jjs_jquery-1.10.2.min.js" type="text/javascript"></script>
+<script type="text/javascript" src="/static/jjs_menu_min.js"></script>
+<script type="text/javascript">
+$(document).ready(function (){
+  $(".menu ul li").menu();
+}); 
+</script> 
+<link rel="stylesheet" type="text/css" href="/static/ccs_menu-css.css">
+<link rel="stylesheet" type="text/css" href="/static/ccs_style.css"> 
+
+<style>
+
+
+body {
+
+overflow-x: hidden;
+overflow-x: hidden !important;
+
+overflow-y: auto;
+
+
+}
+
+
+body {
+scrollbar-arrow-color:#ffffff; 
+scrollbar-face-color: #ffffff; 
+scrollbar-3dlight-color:#ffffff; 
+
+scrollbar-highlight-color: #ffffff;
+
+scrollbar-shadow-color: #ffffff;
+
+scrollbar-darkshadow-color: #ffffff; 
+
+scrollbar-track-color: #ffffff;
+
+scrollbar-base-color:#ffffff;
+}
+
+</style> 
+
+
+
+
+
+</head>
+<body> 
+
+<div id="logo" ><a href="/blog/search_submit"> <img src="/static/logo.jpg" /></a></div>
+
+<div id="content">
+
+    <div class="menu">
+               <ul>
+        <li><a class="active" href="#">人物</a>
+            <ul style="display: block;">
+                <li><a href="#">科学家</a></li>
+                <li><a href="#">政府人员</a>
+                    <ul>
+                        <li><a href="#">习近平</a></li>
+                        <li><a href="#">李克强</a></li>
+                        <li><a href="#">王岐山</a></li>
+                        <li><a href="#">齐天大圣</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">影视明星</a>
+					 <ul>
+                        <li><a href="#">周星驰</a></li>
+						<li><a href="#">李连杰</a></li>
+                        <li><a href="#">甄子丹</a></li>
+						<li><a href="#">刘德华</a></li>
+                    </ul>
+				</li>
+                <li><a href="#">体育大碗</a>
+                    <ul>
+                        <li><a href="#">科比</a></li>
+						<li><a href="#">詹姆斯</a></li>
+                        <li><a href="#">姚明</a></li>
+						<li><a href="#">等等等</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">民间草根</a>
+				    <ul>
+                        <li><a href="#">草根1</a></li>
+						<li><a href="#">草根2</a></li>
+                        <li><a href="#">草根3</a></li>
+						<li><a href="#">大白菜</a></li>
+                    </ul>
+				
+				</li>
+            </ul>
+        </li>
+        <li><a href="#">自然</a>
+            <ul>
+                <li><a href="#">Subitem 1</a>
+				     <ul>
+                        <li><a href="#">Subitem 1</a></li>
+                        <li><a href="#">Subitem 2</a></li>
+                        <li><a href="#">Subitem 3</a></li>
+                        <li><a href="#">Subitem 4</a></li>
+                    </ul>
+				</li>
+                <li><a href="#">Subitem 2</a>
+								     <ul>
+                        <li><a href="#">Subitem 1</a></li>
+                        <li><a href="#">Subitem 2</a></li>
+                        <li><a href="#">Subitem 3</a></li>
+                        <li><a href="#">Subitem 4</a></li>
+                    </ul>
+				</li>
+                <li><a href="#">Subitem 3</a>
+								     <ul>
+                        <li><a href="#">Subitem 1</a></li>
+                        <li><a href="#">Subitem 2</a></li>
+                        <li><a href="#">Subitem 3</a></li>
+                        <li><a href="#">Subitem 4</a></li>
+                    </ul>
+				</li>
+                <li><a href="#">Subitem 4</a>
+								     <ul>
+                        <li><a href="#">Subitem 1</a></li>
+                        <li><a href="#">Subitem 2</a></li>
+                        <li><a href="#">Subitem 3</a></li>
+                        <li><a href="#">Subitem 4</a></li>
+                    </ul>
+				</li>
+            </ul>
+        </li>
+		
+		        <li><a href="#">文化</a>
+            <ul>
+                <li><a href="#">Subitem 1</a></li>
+                <li><a href="#">Subitem 2</a></li>
+                <li><a href="#">Subitem 3</a></li>
+                <li><a href="#">Subitem 4</a></li>
+            </ul>
+        </li>
+		
+		
+		        <li><a href="#">体育</a>
+            <ul>
+                <li><a href="#">Subitem 1</a></li>
+                <li><a href="#">Subitem 2</a></li>
+                <li><a href="#">Subitem 3</a></li>
+                <li><a href="#">Subitem 4</a></li>
+            </ul>
+        </li>
+		
+		
+		        <li><a href="#">历史</a>
+            <ul>
+                <li><a href="#">Subitem 1</a></li>
+                <li><a href="#">Subitem 2</a></li>
+                <li><a href="#">Subitem 3</a></li>
+                <li><a href="#">Subitem 4</a></li>
+            </ul>
+        </li>
+        <li><a href="#">社会</a>
+            <ul>
+                <li><a href="#">Subitem 1</a></li>
+                <li><a href="#">Subitem 2</a></li>
+                <li><a href="#">Subitem 3</a></li>
+                <li><a href="#">Subitem 4</a></li>
+                <li><a href="#">Subitem 5</a></li>
+                <li><a href="#">Subitem 6</a></li>
+            </ul>
+        </li>
+		        <li><a href="#">地理</a>
+            <ul>
+                <li><a href="#">Subitem 1</a></li>
+                <li><a href="#">Subitem 2</a></li>
+                <li><a href="#">Subitem 3</a></li>
+                <li><a href="#">Subitem 4</a></li>
+                <li><a href="#">Subitem 5</a></li>
+                <li><a href="#">Subitem 6</a></li>
+            </ul>
+        </li>
+		        <li><a href="#">科技</a>
+            <ul>
+                <li><a href="#">Subitem 1</a></li>
+                <li><a href="#">Subitem 2</a></li>
+                <li><a href="#">Subitem 3</a></li>
+                <li><a href="#">Subitem 4</a></li>
+                <li><a href="#">Subitem 5</a></li>
+                <li><a href="#">Subitem 6</a></li>
+            </ul>
+        </li>
+		        <li><a href="#">娱乐</a>
+            <ul>
+                <li><a href="#">Subitem 1</a></li>
+                <li><a href="#">Subitem 2</a></li>
+                <li><a href="#">Subitem 3</a></li>
+                <li><a href="#">Subitem 4</a></li>
+                <li><a href="#">Subitem 5</a></li>
+                <li><a href="#">Subitem 6</a></li>
+            </ul>
+        </li>
+				        <li><a href="#">生活</a>
+            <ul>
+                <li><a href="#">Subitem 1</a></li>
+                <li><a href="#">Subitem 2</a></li>
+                <li><a href="#">Subitem 3</a></li>
+                <li><a href="#">Subitem 4</a></li>
+                <li><a href="#">Subitem 5</a></li>
+                <li><a href="#">Subitem 6</a></li>
+            </ul>
+        </li>
+				        <li><a href="#">其他</a>
+            <ul>
+                <li><a href="#">Subitem 1</a></li>
+                <li><a href="#">Subitem 2</a></li>
+                <li><a href="#">Subitem 3</a></li>
+                <li><a href="#">Subitem 4</a></li>
+                <li><a href="#">Subitem 5</a></li>
+                <li><a href="#">Subitem 6</a></li>
+            </ul>
+        </li>
+				        <li><a href="#">还有一个</a>
+            <ul>
+                <li><a href="#">Subitem 1</a></li>
+                <li><a href="#">Subitem 2</a></li>
+                <li><a href="#">Subitem 3</a></li>
+                <li><a href="#">Subitem 4</a></li>
+                <li><a href="#">Subitem 5</a></li>
+                <li><a href="#">Subitem 6</a></li>
+            </ul>
+        </li>
+     <!--   <li><a href="#">Item without subitems</a></li>
+        <li><a href="#">Item without subitems</a></li>-->
+    </ul>
+    </div>
+</div>
+</body>
+
+<script>
+
+ var scrollFunc=function(e){
+     
+     e=e || window.event;
+	 var content=document.getElementById("content");
+
+    
+     if(e.wheelDelta){//IE/Opera/Chrome
+	content.style.bottom+=e.wheelDelta;
+	 
+    //  alert(e.wheelDelta);
+     }else if(e.detail){//Firefox
+	content.style.bottom+=e.detail;
+	 
+   //    alert(e.detail);
+     }
+    
+ }
+  /*注册事件*/
+if(document.addEventListener){
+     document.addEventListener('DOMMouseScroll',scrollFunc,false);
+}//W3C
+
+window.onmousewheel=document.onmousewheel=scrollFunc;//IE/Opera/Chrome/Safari
+
+
+
+</script>
+
+
+</html>

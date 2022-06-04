@@ -1,0 +1,56 @@
+body {
+		    background-size:cover;/*背景图片填充整个页面，火狐支持，但ie不支持用下边的滤镜方法可以解决*/
+			
+            filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/static/bg2.gif',sizingMethod='scale');/*背景不满页面*/
+			
+			background-color:black;/*背景设置成黑色*/
+			background-image:url(/static/bg2.gif);/*设置背景那个图片，当前IP下工作目录文件*/
+			background-repeat:no-repeat;/*设置背景图片不重复*/
+			background-position:bottom right;/*设置背景那个图片位置*/
+			background-attachment:fixed;/*设置背景图片不滚动*/
+			overflow:hiden;
+			
+			padding:0;
+			margin:0;
+			text-align:center;
+			
+			color:white;
+			
+			}
+			
+		
+
+
+#content{
+height:100%;
+width:100%;
+position:auto;
+display:block;
+text-align:center;
+
+}
+
+
+textarea{
+resize:none;
+
+height:100000px;
+width:60%;
+//right:15px;
+color:black;
+background-color: rgba(255,255,255,1);/* IE9、标准浏览器、IE6和部分IE7内核的浏览器(如QQ浏览器)会读懂 */
+border:0px;
+
+//overflow:hidden;
+font-size:20px;
+}
+
+
+
+
+
+
+
+
+    
+

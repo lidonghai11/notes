@@ -1,0 +1,40 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+        "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<script type="text/javascript"> 
+
+ </script> 
+<head>
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="/static/music-js/plugin/css/style.css">
+    <link rel="stylesheet" type="text/css" href="/static/music-js/demo/css/demo.css">
+    <script type="text/javascript" src="/static/music-js/demo/js/jquery-1.6.1.min.js"></script>
+    <script type="text/javascript" src="/static/music-js/plugin/jquery-jplayer/jquery.jplayer.js"></script>
+    <script type="text/javascript" src="/static/music-js/plugin/ttw-music-player-min.js"></script>
+    <script type="text/javascript" src="/static/music-js/demo/js/myplaylist.js"></script>
+
+    <script type="text/javascript">
+        $(document).ready(function(){
+            var description = '';
+
+            $('body').ttwMusicPlayer(myPlaylist, {
+                autoPlay:false, 
+                description:description,
+                jPlayer:{
+                    swfPath:'/static/music-js/plugin/jquery-jplayer' //You need to override the default swf path any time the directory structure changes
+                }
+            });
+        });
+    </script>
+</head>
+<body>
+
+<div id="title"></div>
+<!--<a href="http://www.codebasehero.com/download?file=music-player" id="download">Download Here</a>-->
+<form id="download" enctype="multipart/form-data" action="/blog/uploadFile/" method="post"> 
+ <input type="file" name="myfile" /> 
+ <input type="submit" value="上传歌曲"/> 
+</form> 
+
+</body>
+</html>

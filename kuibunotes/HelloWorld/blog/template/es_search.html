@@ -1,0 +1,79 @@
+<!DOCTYPE HTML><!--html5的写法-->
+<html>
+<head>
+		
+		<title> 搜索首页</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><!--设置编码为utf-8-->
+		
+		 <meta name="keywords" content="blog,article,DBA"/><!--被用来搜索的关键字-->
+		 <meta name="description" content="数据库知识搜索"/>
+		 <meta http-equiv="Windows-Tatget" content="_top"><!--你的网页将不会被拿到分针中去，会占领整个网页-->
+		 <meta http-equiv="Pragma" content="no-cache"><!--设置无缓存-->
+		 <meta http-equiv="expires" content="Wed, 23 Aug 2026 12:40:27 UTC" /><!--设置网页过期时间-->
+		 
+		 <meta http-equiv="Page-Enter" content="revealTrans(Transition=23,Duration=1.000)">
+		 <meta http-equiv="Page-Exit" content="revealTrans(Transition=23,Duration=1.000)"><!--页面进入退出是的特效-->
+		 
+		 <link rel="stylesheet" type="text/css" href="/static/layout.css"/>
+		
+		 
+	
+</head>
+
+
+ 
+
+<body  id='bg'>  
+
+		 <div id=header >
+		   <ul>
+				<li><a href=""> 首页</a></li>
+				
+				<!--<li><a href="www.baidu.com"> 搜索页</a></li>-->
+				
+				<li><a href="/blog/es_notes"> 笔记</a></li>
+				<li><a href="/blog/es_handle" target="_blank"> 记笔记</a></li>
+				<li><a href="/blog/robchat" target="_blank"> 机器人</a></li>
+				
+				
+									 
+									 
+			<span id='guest'><a href="">{{request.user.username}}</a></span>						 
+									
+		 </div>
+ 
+ 
+ 
+		<div id='content' >
+		
+		<table cellspacing=0 cellpadding=0 border=0px bordercolor=red  >
+							   
+			   <form action="/blog/es_notes" method="get">
+				   <tr >
+					   <td >
+						<b id='b1' >跬&nbsp;</b><b  id='b2'>步&nbsp;</b><input id='input1'  type="text" name="key_words"  value="请输入关键词"> <input id='input2'  name="btn"  type="image" src="/static/bt.gif">
+					   </td>  
+				   </tr>
+					
+					
+			   </form>
+		</table>
+		
+		 <div id=footer >
+				休憩：<a href="/blog/music">音乐</a>&nbsp;&nbsp;&nbsp;<a href="/blog/album">相册</a>&nbsp;&nbsp;&nbsp;
+		 </div>
+		 
+		  <textarea rows="6" cols="30" id='replace' name="message" readonly  >美洲狮（学名：Puma concolor）又称美洲金猫，大小和花豹相仿，但外观上没有花纹且头骨较小。全长近2米，肩高65cm，体重30～110kg，为猫亚科中最大者。雄性比雌性大二分之一。躯体均匀，四肢中长，趾行性。头大而圆，吻部较短，视、听、嗅觉均很发达。犬齿及裂齿极发达；上裂齿具三齿尖，下裂齿具2齿尖；臼齿较退化，齿冠直径小于外侧门齿高度。皮毛柔软，全身为单一的灰色、红棕色或红色。前足5趾，后足4趾；爪锋利，可伸缩。尾较发达。栖息于除热带雨林外的各种环境，善于攀爬和跳跃，全天均可活动。喜独居。肉食，常以伏击方式捕杀各种脊椎动物为食。主要以野生动物兔、羊、鹿为食，在饥饿时也会盗食家畜家禽。如果美洲狮捕捉的猎物比较多，它们就会把剩余的食物藏在树上，等以后回来再吃。分布于美洲。
+		  </textarea>
+	
+		</div>
+
+
+
+
+
+
+</body>
+
+<script src="/static/all1.js">//包含js文件  </script>
+</html>
