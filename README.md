@@ -1,6 +1,7 @@
 # notes
 A simple note-taking system based on the full-text search engine elasticsearch, which assists in recording knowledge and skills in daily, work and study, and quickly searches for the required records
 
+基于全文搜索引擎elasticsearch的简易笔记系统，辅助记录日常、工作、学习中的知识和技能，快速搜索到需要的记录
 
 ##docker镜像，直接运行镜像并运行，按照步骤启动各个组件
 
