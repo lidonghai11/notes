@@ -5,7 +5,19 @@ A simple note-taking system based on the full-text search engine elasticsearch, 
 
 ##docker镜像，直接运行镜像并运行，按照步骤启动各个组件
 
-docker pull  lidonghai11/private:notes_03
+docker pull  lidonghai11/private:notes_04
+
+
+
+##docker中已经将下方所有服务开机自启动，下方命令作为参考
+
+
+
+
+
+
+
+
 
 1、运行nginx:
 

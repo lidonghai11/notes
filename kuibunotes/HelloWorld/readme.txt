@@ -1,3 +1,12 @@
+##docker中下方服务已经添加开机自启动，下方命令作为参考
+
+
+
+
+
+
+
+
 ##docker镜像，直接运行镜像并运行，按照步骤启动各个组件
 docker pull  lidonghai11/private:notes_03
 1、运行nginx:
